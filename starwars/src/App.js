@@ -6,7 +6,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      next: '',
+      previous: ''
     };
   }
 
@@ -20,11 +22,16 @@ class App extends Component {
     // We then take that data and resolve it our state.
     fetch(URL)
       .then(res => {
+        console.log(res);
         return res.json();
       })
       .then(data => {
         console.log(data);
-        this.setState({ starwarsChars: data.results });
+        this.setState({
+          starwarsChars: data.results,
+          next: data.next,
+          previous: data.previous
+        });
       })
       .catch(err => {
         throw new Error(err);
@@ -32,20 +39,24 @@ class App extends Component {
   };
 
   setEyeColor = e => {
-    console.log(e.target);
     e.target.style.color = e.target.innerHTML
     e.target.style.backGroundColor = 'black'
   }
 
-  loadMore = () => {
-    this.getCharacters("https://swapi.co/api/people/?page=2")
+  next = () => {
+    this.getCharacters(this.state.next)
+  }
+  
+  previous = () => {
+    this.getCharacters(this.state.previous)
   }
 
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
-        <button onClick={this.loadMore}> Load More </button>
+        <button onClick={this.previous}> back </button>
+        <button onClick={this.next}> load more </button>
         <div>
           <CharacterList 
           data={this.state.starwarsChars} 
