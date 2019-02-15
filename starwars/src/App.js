@@ -12,7 +12,6 @@ class App extends Component {
 
   componentDidMount() {
     this.getCharacters("https://swapi.co/api/people");
-    
   }
 
   getCharacters = URL => {
@@ -24,6 +23,7 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
+        console.log(data);
         this.setState({ starwarsChars: data.results });
       })
       .catch(err => {
@@ -34,12 +34,18 @@ class App extends Component {
   setEyeColor = e => {
     console.log(e.target);
     e.target.style.color = e.target.innerHTML
+    e.target.style.backGroundColor = 'black'
+  }
+
+  loadMore = () => {
+    this.getCharacters("https://swapi.co/api/people/?page=2")
   }
 
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <button onClick={this.loadMore}> Load More </button>
         <div>
           <CharacterList 
           data={this.state.starwarsChars} 

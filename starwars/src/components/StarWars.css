@@ -17,11 +17,15 @@ li {
   align-items: center;
   font-size: 18px;
   padding: 10px;
-  color: #bee3ec;
+  color: #f2f2f2;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+span {
+  cursor: pointer;
 }
 
 .character-name {
   font-size: 24px;
-  color: #f2f2f2
+  color: #f2f2f2;
 }
