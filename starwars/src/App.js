@@ -44,10 +44,18 @@ class App extends Component {
   }
 
   next = () => {
+    if (this.state.next === null) {
+      alert('No More');
+      return;
+    }
     this.getCharacters(this.state.next)
   }
   
   previous = () => {
+    if (this.state.previous === null) {
+      alert('This is the beginning')
+      return;
+    }
     this.getCharacters(this.state.previous)
   }
 
