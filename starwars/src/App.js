@@ -12,6 +12,7 @@ class App extends Component {
 
   componentDidMount() {
     this.getCharacters("https://swapi.co/api/people");
+    
   }
 
   getCharacters = URL => {
@@ -30,6 +31,11 @@ class App extends Component {
       });
   };
 
+  setEyeColor = e => {
+    console.log(e.target);
+    e.target.style.color = e.target.innerHTML
+  }
+
   render() {
     return (
       <div className="App">
@@ -37,7 +43,7 @@ class App extends Component {
         <div>
           <CharacterList 
           data={this.state.starwarsChars} 
-
+          setEyeColor={this.setEyeColor}
           />
         </div>
       </div>

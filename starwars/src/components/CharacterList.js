@@ -9,6 +9,7 @@ const CharacterList = props => {
         <Character 
         key={index}
         data={character} 
+        setEyeColor={props.setEyeColor}
         />
       )}
     </div>
