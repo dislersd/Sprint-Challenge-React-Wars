@@ -1,21 +1,17 @@
-import React from 'react'
-import Character from './Character'
+import React from "react";
+import Character from "./Character";
 
-class CharacterList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        <Character />
-      </div>
-    )
-  }
-}
+const CharacterList = props => {
+  return (
+    <div>
+      {props.data.map(character => 
+        <Character 
+        key={character.id}
+        data={character} 
+        />
+      )}
+    </div>
+  );
+};
 
 export default CharacterList;

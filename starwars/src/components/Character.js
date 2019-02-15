@@ -3,8 +3,8 @@ import React from 'react'
 const Character = props => {
     return(
       <div>
-        <p> {props.starWarsChars.name}</p>
-        <p> {props.starWarsChars.eyeColor} </p>
+        <p> {props.data.name} </p>
+        <p> {props.data.eyeColor} </p>
       </div>
     )
 }
