@@ -24,14 +24,27 @@ In this challenge, create a web page that presents a styled list of Star Wars ch
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
+***
+- [x] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-- [ ] What does it mean to _think_ in react?
+  - React is a javascript library that allows us to build user interfaces with components. React helps us work with lots of data within apps and makes it easier to pass data from one component to another. React makes our apps faster because it can update only certain parts of the DOM without effecting the whole DOM using virtual DOM.
 
-- [ ] Describe state.
+***
+- [x] What does it mean to _think_ in react?
 
-- [ ] Describe props.
+  - It means to think of the different parts or components of an app and how you want to pass data around. How you want to build your app using reacts tools.
 
+***
+- [x] Describe state.
+
+  - State is the top level data within components, in the form of an object, that will be passed down to other parts.
+
+***
+- [x] Describe props.
+
+  - Props are pieces of data we can pass to components using attributes within component tags. Almost like we pass arguments into javascript functions we can pass data to react components using props.
+
+***
 ## Project Set Up
 
 Follow these steps to set up and work on your project:

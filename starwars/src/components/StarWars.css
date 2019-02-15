@@ -1,0 +1,31 @@
+ul {
+  background-color: #222222aa;
+  list-style: none;
+  margin: 10px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  border-radius: 5px;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 10px;
+  color: #efa;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+span {
+  cursor: pointer;
+}
+
+.character-name {
+  font-size: 24px;
+  color: #efa;
+}
