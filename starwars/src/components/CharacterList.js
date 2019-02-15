@@ -1,12 +1,13 @@
 import React from "react";
 import Character from "./Character";
+import "./StarWars.css"
 
 const CharacterList = props => {
   return (
     <div>
-      {props.data.map(character => 
+      {props.data.map((character, index) => 
         <Character 
-        key={character.id}
+        key={index}
         data={character} 
         />
       )}
